@@ -1,0 +1,126 @@
+Low-Level Design (LLD) Document
+Project Title: Blood Bank Management System
+Author: Shivam Sahu
+Date: [Date]
+1. Introduction
+The LLD provides detailed information about the components, classes, methods, and database schema used in the Blood Bank Management System.
+
+2. Detailed Design
+2.1 Database Design
+Tables
+Users: Stores user information
+
+user_id (PK)
+username
+password
+email
+role
+Donors: Stores donor details
+
+donor_id (PK)
+name
+age
+blood_group
+contact_info
+last_donation_date
+Blood_Inventory: Stores blood inventory details
+
+blood_id (PK)
+blood_group
+quantity
+expiry_date
+Requests: Stores blood requests
+
+request_id (PK)
+patient_name
+blood_group
+quantity
+hospital_name
+status
+Relationships
+Users to Donors (1:1)
+Blood_Inventory to Requests (1
+)
+2.2 Class Design
+Classes
+User
+
+user_id
+username
+password
+email
+role
+Methods: register(), login(), updateProfile()
+Donor (inherits User)
+
+donor_id
+name
+age
+blood_group
+contact_info
+last_donation_date
+Methods: donateBlood(), viewDonationHistory()
+Inventory
+
+blood_id
+blood_group
+quantity
+expiry_date
+Methods: addBlood(), updateBlood(), checkAvailability()
+Request
+
+request_id
+patient_name
+blood_group
+quantity
+hospital_name
+status
+Methods: createRequest(), updateStatus(), trackRequest()
+2.3 API Design
+Endpoints
+User
+
+POST /register: Register a new user
+POST /login: User login
+PUT /updateProfile: Update user profile
+Donor
+
+POST /donate: Register a new blood donation
+GET /donationHistory: Get donation history
+Inventory
+
+POST /addBlood: Add new blood to inventory
+PUT /updateBlood: Update blood details
+GET /checkAvailability: Check blood availability
+Request
+
+POST /createRequest: Create a new blood request
+PUT /updateStatus: Update request status
+GET /trackRequest: Track the status of a request
+2.4 Sequence Diagrams
+User Registration
+User submits registration form.
+System validates input data.
+System creates a new user record in the database.
+System sends a confirmation email to the user.
+Blood Donation
+Donor submits blood donation form.
+System validates donor eligibility.
+System updates the blood inventory.
+System updates the donor's donation history.
+Blood Request
+Hospital/patient submits a blood request.
+System checks blood availability.
+System updates the request status.
+System notifies the hospital/patient of the request status.
+2.5 Frontend Design
+Login Page: Form for user login.
+Dashboard: Overview of system operations and statistics.
+Donor Registration Form: Form for registering new donors.
+Blood Inventory Page: Displays current blood inventory.
+Request Form: Form for submitting blood requests.
+Reports Page: Displays various reports and analytics.
+Notes:
+Customize the project details, author, and date sections as per your requirements.
+Add any additional modules or functionalities specific to your project.
+Ensure to update the database schema and API endpoints according to your project needs.
