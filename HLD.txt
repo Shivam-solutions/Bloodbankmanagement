@@ -1,0 +1,56 @@
+High-Level Design (HLD) Document
+Project Title: Blood Bank Management System
+Author: Shivam sahu
+Date: 19/06/2024
+1. Introduction
+The Blood Bank Management System is a web-based application designed to manage the storage, donation, and distribution of blood within a blood bank. The system aims to streamline operations, ensure efficient management of blood inventory, and facilitate easy access to blood for those in need.
+
+2. Objectives
+To provide a centralized platform for managing blood donations and requests.
+To ensure accurate tracking of blood inventory.
+To facilitate easy access to donor information and blood availability.
+To streamline the process of blood donation and distribution.
+3. Scope
+Donor Registration and Management
+Blood Inventory Management
+Blood Donation Process Management
+Blood Request Management
+Reports and Analytics
+User Authentication and Authorization
+4. System Architecture
+The system architecture is based on a three-tier architecture:
+
+Presentation Layer: User interfaces for donors, admin, and staff.
+Business Logic Layer: Core application logic for managing blood bank operations.
+Data Access Layer: Interaction with the database to store and retrieve data.
+5. Modules
+5.1 User Module
+Registration: Allows new users to register with the system.
+Login: Provides authentication for registered users.
+Profile Management: Allows users to manage their personal information.
+5.2 Donor Module
+Donor Registration: Capture donor details.
+Donation History: Track past donations of a donor.
+5.3 Inventory Module
+Blood Stock Management: Track and manage blood inventory.
+Blood Group Availability: Monitor the availability of different blood groups.
+5.4 Request Module
+Blood Request: Allows hospitals and patients to request blood.
+Request Tracking: Track the status of blood requests.
+5.5 Admin Module
+User Management: Manage users and their roles.
+Report Generation: Generate various reports on donations, requests, and inventory.
+6. User Roles and Permissions
+Admin: Full access to all modules.
+Staff: Access to donor, inventory, and request modules.
+Donor: Access to donor-specific features like profile and donation history.
+7. Technologies Used
+Frontend: HTML, CSS, JavaScript
+Backend: Python (Flask/Django)
+Database: MySQL
+Other Tools: Git, Docker (if applicable)
+8. Non-Functional Requirements
+Performance: The system should handle up to 1000 concurrent users.
+Security: Data encryption, secure login, and regular security audits.
+Usability: User-friendly interface with responsive design.
+Scalability: Should be able to scale horizontally.
