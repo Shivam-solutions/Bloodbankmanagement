@@ -59,5 +59,5 @@ The Blood Bank Management System is designed to manage blood donations, inventor
 - **Notifications**: Celery (for asynchronous tasks), Email, SMS (if integrated)
 
 ## Diagram
-![Architecture Diagram](path/to/diagram.png)
+![Architecture Diagram](diagram.png)
 
